@@ -9,7 +9,7 @@ used to render the order in the admin interface.
 StackedInline is another option
 """
 class OrderLineAdminInline(admin.TabularInline):
-    models = OrderLineItem
+    model = OrderLineItem
     
 """
 The admin interface has the abiltity to edit more

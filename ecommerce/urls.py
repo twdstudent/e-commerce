@@ -31,3 +31,15 @@ urlpatterns = [
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
+
+"""
+ we need to import urls from products as urls_products.
+And we're also going to import the view from products, and, in particular, the all_products view.
+And we also import static from Django views.
+And from settings, we need to import MEDIA_ROOT.
+So what we're going to say here is if there's no name after the slash in the URL, then we will just display all_products.
+So what the customer will see on the very first page is all of the products.
+And then for /products, we will include all our URLs from the products app.
+Because we are now using images in media, we need to the specific media URL.
+And this is just standard Django.
+"""
